@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оренда автомобілів - CarRent</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/743/743007.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-main">
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="CarRent" class="logo">
+            <div>
+                <h1>CarRent</h1>
+                <div class="slogan">Орендуй авто своєї мрії — швидко, вигідно, надійно!</div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button id="walletBtn">Гаманець</button>
+            <button id="loginBtn">Вхід</button>
+            <button id="registerBtn">Реєстрація</button>
+        </div>
+    </header>
+    <main>
+        <section class="cars-list" id="carsList">
+            <!-- Автомобілі додаються через JS -->
+        </section>
+        <section class="my-rents-section" id="myRentsSection" style="display:none;">
+            <h2>Мої орендовані авто</h2>
+            <div class="my-rents-list" id="myRentsList"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div>CarRent &copy; 2024</div>
+            <div>Звʼязок: <a href="mailto:support@carrent.com">support@carrent.com</a></div>
+            <div>Instagram: <a href="https://instagram.com/" target="_blank">@carrent</a></div>
+        </div>
+    </footer>
+
+    <!-- Модальні вікна (без змін) -->
+    <div class="modal" id="rentModal">
+        <div class="modal-content">
+            <span class="close" id="closeRent">&times;</span>
+            <h2>Підтвердження оренди</h2>
+            <div id="rentCarInfo"></div>
+            <form id="rentForm">
+                <label>Кількість днів:
+                    <input type="number" id="rentDays" min="1" value="1" required>
+                </label>
+                <button type="submit">Підтвердити</button>
+            </form>
+            <div id="rentResult"></div>
+        </div>
+    </div>
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close" id="closeRegister">&times;</span>
+            <h2>Реєстрація</h2>
+            <form id="registerForm">
+                <label>Ім'я:
+                    <input type="text" id="regName" required>
+                </label>
+                <label>Email:
+                    <input type="email" id="regEmail" required>
+                </label>
+                <label>Пароль:
+                    <input type="password" id="regPassword" required>
+                </label>
+                <button type="submit">Зареєструватися</button>
+            </form>
+            <div id="registerResult"></div>
+        </div>
+    </div>
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Вхід</h2>
+            <form id="loginForm">
+                <label>Email:
+                    <input type="email" id="loginEmail" required>
+                </label>
+                <label>Пароль:
+                    <input type="password" id="loginPassword" required>
+                </label>
+                <button type="submit">Увійти</button>
+            </form>
+            <div id="loginResult"></div>
+        </div>
+    </div>
+    <div class="modal" id="walletModal">
+        <div class="modal-content">
+            <span class="close" id="closeWallet">&times;</span>
+            <h2>Ваш гаманець</h2>
+            <div id="walletInfo"></div>
+            <form id="addFundsForm">
+                <label>Поповнити баланс (грн):
+                    <input type="number" id="addFunds" min="1" value="100" required>
+                </label>
+                <button type="submit">Поповнити</button>
+            </form>
+            <div id="addFundsResult"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
