@@ -10,7 +10,7 @@ const cars = [
     name: "Volkswagen Golf",
     price: 900,
     img: "images/Volkswagen Golf.jpg",
-    desc: "Стильний хетчбек з сучасними технологіями та комфортом."
+    desc: "Стильний хетчбек з сучасними технологіями."
   },
   {
     name: "Renault Duster",
